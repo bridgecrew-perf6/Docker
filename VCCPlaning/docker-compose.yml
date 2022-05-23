@@ -1,8 +1,8 @@
 version: '3'
 
 volumes:
-  VCCPlanning_app:
-  VCCPlanning_db:
+  app:
+  db:
 
 services:
 
@@ -22,7 +22,7 @@ services:
       MYSQL_ROOT_PASSWORD: '4z9AFpQMtpCsRJHKUe'
 
     volumes:
-      - VCCPlanning_db:/var/lib/mysql
+      - db:/var/lib/mysql
 
     restart: always
 
@@ -46,7 +46,7 @@ services:
         python /app/manage.py migrate
         python /app/manage.py runserver 0.0.0.0:80
     volumes:
-      - VCCPlanning_app:/app
+      - app:/app
 
     depends_on:
       - db
