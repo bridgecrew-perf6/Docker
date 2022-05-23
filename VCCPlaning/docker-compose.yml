@@ -16,10 +16,10 @@ services:
       - 3306:3306
 
     environment:
-      MYSQL_DATABASE: 'planing'
-      MYSQL_USER: 'planing_admin'
-      MYSQL_PASSWORD: 'F13DVO82S1YTj9yQAm'
-      MYSQL_ROOT_PASSWORD: '4z9AFpQMtpCsRJHKUe'
+      MYSQL_DATABASE: ''
+      MYSQL_USER: ''
+      MYSQL_PASSWORD: ''
+      MYSQL_ROOT_PASSWORD: ''
 
     volumes:
       - db:/var/lib/mysql
