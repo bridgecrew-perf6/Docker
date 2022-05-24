@@ -36,7 +36,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 DEBUG = os.getenv('DEBUG', default = True)
 DEBUG = False
 
-ALLOWED_HOSTS = ['10.1.24.101', 'vkssch.cs.gkovd.ru']
+ALLOWED_HOSTS = ['IP/DNS']
 
 # Application definition
 
@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'V3C.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': str(os.getenv('DB_DATABASE')),
+        'NAME': str(os.getenv('DB_NAME')),
         'USER': str(os.getenv('DB_USER')),
         'PASSWORD': str(os.getenv('DB_PASSWORD')),
         'HOST': str(os.getenv('DB_HOST')),
